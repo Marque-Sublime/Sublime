@@ -1,0 +1,481 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth ;
+	}
+body {
+	background-color: rgb(0, 0, 0, 0.5);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	}
+header {
+	background-color: rgb(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 5px 5px 10px black;
+	border-bottom: white;
+	position: fixed;
+	top: 0;
+	padding: 2px;
+	width: 100%;
+	z-index: 1;
+	}
+.last img{
+	border-radius: 10px;
+	width: 10%;
+}
+.last{
+	width:40%;
+	display: flex;
+}
+.top{
+	margin-top: 5px;
+}
+.last h3{
+	margin-left: 15%;	
+}
+.last p {	
+margin-left: 17%;
+}
+nav ul {
+	display: flex;
+	gap: 20px;
+	margin-top: 10px;
+}
+nav ul li {
+	list-style: none;
+}
+nav ul li a {
+	display: block;
+	padding: 10px 8px;
+	text-decoration: none;
+	color: whitesmoke;
+	font-weight: bold ;
+	margin-right: 5px;
+	text-transform: capitalize;
+	position: relative;
+	width: fit-content;
+}
+nav ul li a::before{
+content: "";
+position: absolute;
+width: 0;
+height: 4px;
+left: 0;
+bottom: 5px;
+background-color: red;
+transition: 0.4s ease-in-out;
+}
+nav ul li a:hover::before{
+width: 100%;
+}
+nav ul li a:hover ,#activate
+{
+color: red;
+}
+.description h1 {
+	margin-top:25px ;
+	color: #000;
+	max-width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-style: bold;
+	font-family: 'Times New Roman', Times, serif;
+}
+.description h2 {
+	margin-top:0 ;
+	color: #000;
+	max-width: 100%;
+	text-align: center;
+	font-size: 30px;
+	font-style: bold;
+	animation-delay: 6s;
+	}
+.description h4 {
+color: whitesmoke;
+max-width: 100%;
+line-height: 25px;
+}
+.description{
+	 display: flex;
+	 flex-direction: column; 
+	 margin: 30px;
+	 margin-top: 80px;
+}
+@keyframes typing {
+	from { width: 0; }
+	to { width: 100%; }
+}  
+@keyframes blink-caret {
+from, to { border-color: transparent; }
+50% { border-color: transparent; }
+	}
+.description h1, .description h2 {
+	overflow: hidden; 
+	border-right: .15em solid transparent;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+	animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+.description h1.finished ,.description h1.finished{
+	border-right: none;
+}
+.propos h4{
+	margin-top: 10px;
+	color: #000;
+}
+.propos {
+	margin-top: 40px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 20px; 
+}
+.description .propos {
+	transition: transform 0.3s ease-in-out;
+}
+.description .propos:hover {
+	transform: scale(1.1); 
+}	
+.loisir{
+	display: grid;
+	grid-template-columns: repeat(3 , 1fr);
+	gap: 5px;
+	justify-items: center;
+	align-items: start;
+	margin-top: 10px;
+}
+#loisirs {
+	color: #000;
+	padding: 10px 	;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.image {
+	background-color: rgb(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+	text-align: left;
+	max-width: 300px;
+	flex: 1;
+	width: 100%;
+	}
+	
+.image img {
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+	
+.image h3 {
+	font-size: 20px;
+	margin: 10px 0;
+	color: whitesmoke;
+	text-align: center;
+}
+	
+.image p {
+	font-size:14px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+.debut {
+	color: #000;
+	text-align: center;
+	margin: 35px;
+	font-size: 30px;
+	border-radius: 10px;
+	background-color:  rgba(255, 255, 255, 0.8);
+	display: inline-block;
+	
+}
+#Trouver .image, #Trouver .my-loc { 
+	transition: transform 0.3s ease-in-out; 
+} 
+#Trouver .image:hover, #Trouver .my-loc:hover { 
+	transform: scale(1.1); 
+}
+.loisir .image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.loisir .image:hover {
+    transform: scale(1.1); 
+}
+#Trouver{
+	color: whitesmoke;
+	padding: 10px 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+span{
+	font-size: 1.5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: palevioletred;
+}
+.loc{
+	display: flex;
+	gap: 10px;
+}
+.my-loc{
+	border-radius: 10px;
+	background-color:  rgb(0, 0, 0, 0.5);
+	flex: 2;
+	width: 100px;
+	flex-grow: 1;
+}
+.my-loc p{
+	margin-top: 15px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5rem;
+}
+
+#Contact{
+	color: whitesmoke;
+	padding: 20px 	;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.reseau-sociaux {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	gap: 50px; 
+	margin: 20px auto;
+	max-width: 70%;
+	margin-bottom: 50px;
+	text-align: center;
+	}
+
+.contact-item {
+	text-align: center;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	gap: 10px; 
+	background-color: rgb(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+.contact-item:hover,.left:hover,.image:hover{
+	 scale: 1.2;
+}
+.contact-item h4{
+	color: white;
+	font-style: bold;
+	font-size: 20px;
+}
+.contact-button {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: black;
+	background-color:#e6d9d9;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	text-decoration: none;
+	
+}
+.contact-button:hover {
+	background-color: white;
+	border-color: bisque;
+}
+	
+.contact-item:hover .fa-whatsapp {
+	color: #25d366;
+}
+.contact-item:hover .fa-tiktoktok {
+	color: #404140;
+}
+.contact-item:hover .fa-phone-volume {
+	color: #3955af;
+}
+
+.contact-item:hover .fa-instagram {
+	color:rgb(211, 54, 80);
+}
+.nikita{
+	display: flex;
+	text-align: center;
+	gap: 30px;
+	padding-left: 40px;
+	border: 10px;
+	background-color: rgb(81, 81, 94);
+	border-radius: 10px;
+	margin: 15px;
+}
+.RS{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	gap: 50px; 
+	margin: 20px auto;
+	max-width: 70%;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#Contact{
+	color: #000;
+}
+.command {
+    background-color: transparent;
+    z-index: 1000000;
+    position: fixed;
+    bottom: 19px; 
+    width: 100%;
+    padding: 2px;
+}
+
+.command img {
+    width: 30px; 
+	height: auto;
+	float: right;
+}
+
+.footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    padding: 2px;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    width: 100%;
+}
+
+	/* Adapter le code sur un telephone ms j ai pas verifier si ca aller*/
+@media (max-width: 500px) {
+	header {
+        position: static; 
+    }
+	.last {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
+	.last img {
+		width: 20%; 
+		float: left;
+		
+		}
+	.last h2, .last p {
+		margin-left: 0;
+		text-align: center;
+	}
+	nav ul {
+		flex-direction: column;
+
+		font-size: 0.6rem;
+	}
+	.description, .propos, .loisir, .loc, .nikita, .RS {
+		margin: 0;
+		padding: 10px;
+	}
+	.image {
+		max-width: 100%;
+		margin-bottom: 25px;
+	}
+	.contact-item {
+		width: 100%;
+	}
+	.loisir .image:hover {
+        transform: none;
+	}
+	#Trouver .image, #Trouver .my-loc {
+		transition: none;
+	}
+	
+	#Trouver .image:hover, #Trouver .my-loc:hover {
+		transform: none; 
+	}
+}
+@media (max-width: 768px) {
+    .loisir {
+        grid-template-columns: repeat(1, 1fr);
+    }
+	header {
+        position: static; 
+    }
+	.RD {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+@media (max-width: 768px) {
+    .loc {
+        display: block;
+    }
+	.my-loc{
+		width: 100%;
+		margin: 0;
+	}
+	.my-loc p{
+		font-size: 1rem;
+	}
+	.reseau-sociaux{
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+		margin: 15px;
+	}
+	.reseau-sociaux h4{
+		font-size: 0.5rem;
+		overflow: hidden;
+	}
+	.RS h4{
+		font-size: 0.5rem;
+	}
+	.RS{
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+	#Contact h3{
+		font-size: 1rem;
+	}
+	.debut h2{
+		font-size: 1.3rem;
+	}
+	.description h1, .description h2{
+		font-size: 1rem;
+	}
+	.description h1{
+		margin-top: 15px;
+	}
+	.description h2{
+		margin-bottom: 15px;
+	}
+	.description h4{
+		font-size: 0.5rem;
+	}
+	#Trouver{
+		margin-bottom: 15px;
+	}
+}
+@media (max-width: 500px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+	.image h3,.image p{
+		font-size: 0.5rem;
+	}
+}
+@media screen and (max-width: 768px) { 
+    span {
+        font-size: 1rem; 
+    }
+	.debut{
+		margin: 0;
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 768px) { 
+	.contact-item .contact-button {
+		font-size: 5px;
+	}
+}
