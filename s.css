@@ -420,7 +420,7 @@ span{
 	}
 	.reseau-sociaux{
 		grid-template-columns: repeat(3, 1fr);
-		gap: 40px;
+		gap: 5px;
 		margin: 15px;
 	}
 	.reseau-sociaux h4{
@@ -432,7 +432,7 @@ span{
 	}
 	.RS{
 		grid-template-columns: repeat(3, 1fr);
-		gap: 40px;
+		gap: 5px;
 	}
 	#Contact h3{
 		font-size: 1rem;
